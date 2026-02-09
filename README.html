@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RADARIS | Comprehensive Scientific & Technical Portfolio</title>
+    <title>RADARIS | Technical Portfolio</title>
     <style>
         :root {
             --primary: #0f172a;
@@ -17,116 +17,76 @@
         }
 
         * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; margin: 0; color: #1e293b; background: var(--light); scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; margin: 0; color: #1e293b; background: var(--light); }
         
-        /* Layout Components */
         .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        section { padding: 60px 0; border-bottom: 1px solid var(--border); }
         
-        /* Typography */
         h1, h2, h3, h4 { color: var(--primary); margin-top: 0; }
-        h2 { font-size: 2.5rem; border-left: 8px solid var(--accent); padding-left: 20px; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; }
-        h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--accent); }
+        h2 { font-size: 2.2rem; border-left: 8px solid var(--accent); padding-left: 20px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--accent); }
         
-        /* Navigation & Hero */
-        nav { background: var(--primary); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
-
         header { 
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1517404215738-15263e9f9178?auto=format&fit=crop&q=80');
-            background-size: cover; background-position: center; color: white; padding: 150px 20px; text-align: center; border-bottom: 10px solid var(--gold);
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; border-bottom: 10px solid var(--gold);
         }
-        .hero-tag { background: var(--gold); color: black; padding: 10px 30px; border-radius: 50px; font-weight: 800; text-transform: uppercase; font-size: 1rem; margin-bottom: 30px; display: inline-block; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        /* Content Blocks */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid var(--border); transition: 0.4s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid var(--border); }
 
-        /* Tables */
-        .table-container { overflow-x: auto; margin: 30px 0; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        table { width: 100%; border-collapse: collapse; background: white; min-width: 800px; }
-        th, td { padding: 20px; text-align: left; border-bottom: 1px solid var(--border); }
-        th { background: #f1f5f9; font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.85rem; }
-        tr:last-child td { border-bottom: none; }
-        .highlight-row { background: #fffbeb; }
+        .table-container { overflow-x: auto; margin: 25px 0; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; background: white; min-width: 700px; }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f1f5f9; font-weight: 700; color: var(--primary); font-size: 0.85rem; }
 
-        /* Scientific Lists */
         .spec-list { list-style: none; padding: 0; margin: 0; }
-        .spec-list li { padding: 15px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; }
-        .spec-list li:last-child { border-bottom: none; }
+        .spec-list li { padding: 12px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; }
         .spec-label { font-weight: 600; color: var(--secondary); }
-        .spec-value { color: var(--accent); font-weight: 800; }
+        .spec-value { color: var(--accent); font-weight: 700; }
 
-        /* Market Section */
-        .market-header { background: var(--primary); color: white; padding: 100px 40px; border-radius: 30px; text-align: center; margin-bottom: -50px; position: relative; z-index: 1; }
-        .market-num { font-size: 4rem; font-weight: 900; color: var(--gold); display: block; line-height: 1; }
+        .market-highlight { background: var(--primary); color: white; padding: 60px; border-radius: 25px; text-align: center; margin-top: 40px; }
+        .market-num { font-size: 3rem; font-weight: 900; color: var(--gold); display: block; }
         
-        .footer { background: #020617; color: #94a3b8; padding: 100px 20px; text-align: center; }
-        .diagram-placeholder { background: #e2e8f0; border: 3px dashed var(--accent); padding: 60px; text-align: center; border-radius: 20px; margin: 40px 0; font-style: italic; font-weight: 600; color: var(--secondary); }
+        .footer { background: #020617; color: #94a3b8; padding: 80px 20px; text-align: center; }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="container">
-        <div style="font-weight: 900; font-size: 1.5rem; letter-spacing: -1px;">RADARIS <span style="color:var(--gold)">PRO</span></div>
-        <div>
-            <a href="#abstract">Abstract</a>
-            <a href="#stats">Statistics</a>
-            <a href="#tech">Technical</a>
-            <a href="#results">Results</a>
-            <a href="#market">Market</a>
-        </div>
-    </div>
-</nav>
-
 <header>
-    <div class="hero-tag">Infomatrix 2026 Gold Submission</div>
-    <h1 style="font-size: 5.5rem; margin: 0; letter-spacing: -3px; line-height: 1;">RADARIS</h1>
-    <p style="font-size: 1.8rem; opacity: 0.9; font-weight: 300; max-width: 800px; margin: 20px auto;">A Novel Frontal Collision Warning System utilizing Cognitive Radio-Frequency Networking for Extreme Low-Visibility Environments</p>
+    <h1 style="font-size: 4.5rem; margin: 0; letter-spacing: -2px;">RADARIS</h1>
+    <p style="font-size: 1.5rem; opacity: 0.9; font-weight: 300; max-width: 800px; margin: 20px auto;">Advanced Frontal Collision Warning System</p>
 </header>
 
 <div class="container">
 
-    <section id="abstract">
-        <h2>I. Scientific Abstract</h2>
+    <section>
+        <h2>Scientific Abstract</h2>
+        <p>The Radaris project focuses on developing a hazard warning system for frontal collisions in limited visibility conditions. Current safety systems often depend on optical sensors which fail during fog or heavy rain. Our hypothesis is that a radio-frequency based system can provide reliable alerts regardless of weather, significantly reducing road accidents.</p>
+        
         <div class="grid">
             <div class="card">
-                <h3>Purpose of Study</h3>
-                <p>Development of a hazard warning system for frontal collisions with limited visibility to reduce road accidents in poor visibility conditions[cite: 116]. The study addresses the failure of current ADAS systems which rely on optical detection compromised by weather particulates[cite: 142, 143].</p>
+                <h3>Research Objective</h3>
+                <p>To create an affordable, easy-to-implement hardware solution that utilizes radio waves to alert drivers of hazards before they are visible to the human eye.</p>
             </div>
             <div class="card">
-                <h3>Research Hypothesis</h3>
-                <p>The Radaris system will promptly warn drivers of potential collision risks, ensuring effective accident prevention regardless of weather or road conditions. Its simplicity and affordability make it accessible to a wide range of users, reducing financial burdens[cite: 117, 118].</p>
+                <h3>Technical Novelty</h3>
+                <p>Unlike traditional ADAS, Radaris uses 2.4 GHz radio signals to detect obstacles and communicate between vehicles autonomously, ensuring terrain and weather independence.</p>
             </div>
         </div>
-        
-        <h3>Stages of Work</h3>
-        <ol class="grid" style="list-style: none; padding: 0;">
-            <li class="card">1. Problem Analysis & Scale Assessment [cite: 120]</li>
-            <li class="card">2. Comparative Analysis of Existing Methods [cite: 121]</li>
-            <li class="card">3. Concept Development & Hardware Selection [cite: 122]</li>
-            <li class="card">4. Prototype Assembly (NRF/ATmega 328) [cite: 123]</li>
-            <li class="card">5. Multi-condition Efficiency Testing [cite: 124]</li>
-            <li class="card">6. Safety Integration Evaluation [cite: 125]</li>
-        </ol>
     </section>
 
-    <section id="stats">
-        <h2>II. The Statistical Crisis</h2>
-        <p>According to the WHO, approximately <b>25% of all road accidents</b> occur in conditions of poor visibility[cite: 135]. Historical data confirms a steady increase in casualties as traffic density grows[cite: 133].</p>
+    <section>
+        <h2>Problem Scale and Statistics</h2>
+        <p>Data from the World Health Organization (WHO) indicates that roughly 25% of all road accidents occur when visibility is poor. Statistics show a dangerous upward trend in fatalities as traffic density increases.</p>
         
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Fiscal Year</th>
-                        <th>Total Road Accidents (Low Vis)</th>
+                        <th>Year</th>
+                        <th>Total Accidents in Low Visibility</th>
                         <th>Number of Victims</th>
-                        <th>Confirmed Fatalities</th>
+                        <th>Total Fatalities</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -142,137 +102,122 @@
                         <td>15,500</td>
                         <td>1,400</td>
                     </tr>
-                    <tr class="highlight-row">
-                        <td><b>2023</b></td>
-                        <td><b>12,000</b></td>
-                        <td><b>16,000</b></td>
-                        <td><b>1,500</b></td>
+                    <tr style="background: #fffbeb; font-weight: bold;">
+                        <td>2023</td>
+                        <td>12,000</td>
+                        <td>16,000</td>
+                        <td>1,500</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p style="font-size: 0.8rem; color: #666; text-align: center;">Source: National Highway Traffic Safety Administration (NHTSA), 2024[cite: 140].</p>
     </section>
 
-    <section id="tech">
-        <h2>III. Hardware Architecture & Engineering</h2>
-        <p>The Radaris system operates on the <b>2.4 GHz Industrial, Scientific, and Medical (ISM) band</b>. It is engineered to automatically detect obstacles and broadcast high-priority warning signals to surrounding vehicles[cite: 145, 161].</p>
+    <section>
+        <h2>Technical Architecture</h2>
+        <p>The hardware is built around the ATmega 328 microcontroller and NRF24L01 wireless modules. The system is designed to trigger visual and audio alerts when obstacles are detected within the transmission range.</p>
         
-        <div class="diagram-placeholder">
-            [Insert FIGURE 2: RADARIS SYSTEM DIAGRAM HERE - ATmega328 / NRF24L01 / Ultrasonic Integration]
-        </div>
-
         <div class="grid">
             <div class="card">
-                <h3>Core Hardware Components</h3>
+                <h3>Core Component Specifications</h3>
                 <ul class="spec-list">
-                    <li><span class="spec-label">Microcontroller</span> <span class="spec-value">ATmega 328 [cite: 176]</span></li>
-                    <li><span class="spec-label">Wireless Transceiver</span> <span class="spec-value">NRF24L01 (2.4 GHz) [cite: 175]</span></li>
-                    <li><span class="spec-label">Alert Module</span> <span class="spec-value">Audio High-Decibel [cite: 177]</span></li>
-                    <li><span class="spec-label">Display Unit</span> <span class="spec-value">LCD Real-time Distance [cite: 178]</span></li>
-                    <li><span class="spec-label">Power Source</span> <span class="spec-value">5V / 9V DC Accumulator [cite: 179]</span></li>
+                    <li><span class="spec-label">Microcontroller</span> <span class="spec-value">ATmega 328</span></li>
+                    <li><span class="spec-label">Wireless Module</span> <span class="spec-value">NRF24L01 (2.4 GHz)</span></li>
+                    <li><span class="spec-label">Operating Range</span> <span class="spec-value">Up to 900 Meters</span></li>
+                    <li><span class="spec-label">Power Supply</span> <span class="spec-value">5V / 9V DC</span></li>
+                    <li><span class="spec-label">Alert Mechanism</span> <span class="spec-value">Buzzer & LCD Display</span></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Antenna Physics & Optimization</h3>
-                <p>The system utilizes a custom-tuned antenna to ensure signal integrity over long distances in adverse weather.</p>
+                <h3>Antenna Engineering</h3>
+                <p>The system uses a custom-designed antenna optimized for the ISM band to maintain signal integrity during heavy precipitation.</p>
                 <ul class="spec-list">
-                    <li><span class="spec-label">Material</span> <span class="spec-value">High-Conductivity Copper</span></li>
-                    <li><span class="spec-label">Diameter</span> <span class="spec-value">1.0 mm</span></li>
+                    <li><span class="spec-label">Antenna Material</span> <span class="spec-value">1.0mm Copper Wire</span></li>
                     <li><span class="spec-label">Optimized Length</span> <span class="spec-value">90.0 cm</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="results">
-        <h2>IV. Empirical Results & Comparisons</h2>
-        <p>A vehicle traveling at 100 km/h requires a braking distance of 475 meters[cite: 168]. Radaris provides nearly <b>double</b> the required safety margin[cite: 164, 190].</p>
+    <section>
+        <h2>Comparative Performance Analysis</h2>
+        <p>When traveling at 100 km/h, the required braking distance is 475 meters. Radaris offers a detection range of 900 meters, effectively doubling the safety buffer for the driver.</p>
 
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Performance Metric</th>
-                        <th>Traditional Safety Systems</th>
-                        <th>RADARIS System [cite: 146]</th>
+                        <th>Feature</th>
+                        <th>Traditional Safety (ABS/ESP)</th>
+                        <th>Radaris RF System</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><b>Effective Visibility Support</b></td>
-                        <td style="color:var(--danger)">Low (Depends on Sight)</td>
-                        <td style="color:var(--success); font-weight:800">High (Weather Independent)</td>
+                        <td><b>Efficiency in Fog/Rain</b></td>
+                        <td>Low (Visual Dependent)</td>
+                        <td style="color:var(--success); font-weight:bold;">High (Radio Wave Penetration)</td>
                     </tr>
                     <tr>
-                        <td><b>Operating Range</b></td>
-                        <td style="color:var(--danger)">Line of Sight Only</td>
-                        <td style="color:var(--success); font-weight:800">900 Meters Stable Range</td>
+                        <td><b>Autonomous Warning</b></td>
+                        <td>No (Driver must see obstacle)</td>
+                        <td style="color:var(--success); font-weight:bold;">Yes (Radio Signal Detection)</td>
                     </tr>
                     <tr>
-                        <td><b>Reaction Logic</b></td>
-                        <td style="color:var(--danger)">Manual/Driver Dependent</td>
-                        <td style="color:var(--success); font-weight:800">Autonomous RF Alerting</td>
+                        <td><b>Hardware Complexity</b></td>
+                        <td>High / Proprietary</td>
+                        <td style="color:var(--success); font-weight:bold;">Low / Accessible</td>
                     </tr>
                     <tr>
-                        <td><b>Commercial Accessibility</b></td>
-                        <td style="color:var(--danger)">High-Cost/Luxury Install</td>
-                        <td style="color:var(--success); font-weight:800">Affordable/Universal</td>
+                        <td><b>Cost-Effectiveness</b></td>
+                        <td>High Premium</td>
+                        <td style="color:var(--success); font-weight:bold;">Highly Affordable</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section id="market">
-        <div class="market-header">
-            <h2 style="color:var(--gold); border:none; padding:0; margin-bottom: 20px;">V. Market Potential & Economic Outlook</h2>
-            <p style="font-size: 1.2rem; opacity: 0.8;">The project demonstrates significant commercial scalability via TAM/SAM/SOM assessment[cite: 195, 200].</p>
-        </div>
+    <section>
+        <h2>Market Analysis & Economic Outlook</h2>
+        <p>The economic feasibility study breaks down the potential market for the Radaris system globally and within the regional CIS market.</p>
         
-        <div class="grid" style="margin-top: 0;">
-            <div class="card" style="text-align:center;">
+        <div class="grid">
+            <div class="card" style="text-align: center;">
                 <span class="market-num">4.77T ₸</span>
-                <h3>Global Market (TAM)</h3>
-                <p>Includes 2.87T ₸ for radio receivers and 1.9T ₸ for transmitters[cite: 206].</p>
+                <h4>Total Addressable Market (TAM)</h4>
+                <p>Includes 2.87T ₸ for radio receivers and 1.9T ₸ for transmitters worldwide.</p>
             </div>
-            <div class="card" style="text-align:center;">
+            <div class="card" style="text-align: center;">
                 <span class="market-num">200B ₸</span>
-                <h3>CIS Market (SAM)</h3>
-                <p>Volume for regional deployment in the CIS economic zone[cite: 207].</p>
+                <h4>Serviceable Market (SAM)</h4>
+                <p>Estimated demand within the CIS region based on current transport fleet sizes.</p>
             </div>
-            <div class="card" style="text-align:center;">
+            <div class="card" style="text-align: center;">
                 <span class="market-num">7.8B ₸</span>
-                <h3>Kazakhstan Market (SOM)</h3>
-                <p>Targeting 30% of the transport fleet in the Republic of Kazakhstan[cite: 208].</p>
+                <h4>Obtainable Market (SOM)</h4>
+                <p>Targeting 30% of the transport fleet in Kazakhstan for initial implementation.</p>
             </div>
         </div>
 
-        <div class="card" style="margin-top:30px; border-left: 10px solid var(--success);">
-            <h3>Unit Economics & Profitability [cite: 211, 212]</h3>
-            <p>Our trading model establishes high margins to attract industrial investment:</p>
-            <ul class="grid" style="list-style: none; padding: 0;">
-                <li><b>Transmitter Markup:</b> 2,000 ₸ Per Unit</li>
-                <li><b>Receiver Markup:</b> 3,000 ₸ Per Unit</li>
-                <li><b>Total Economic Outlook:</b> Favorable conditions for immediate implementaiton[cite: 214].</li>
-            </ul>
+        <div class="market-highlight">
+            <h3>Unit Economics and Profitability</h3>
+            <p>Our trading model projects a markup of 2,000 tenge per transmitter and 3,000 tenge per receiver, creating a sustainable and profitable business model for investors.</p>
         </div>
     </section>
 
     <section>
-        <h2>VI. Future Roadmap [cite: 222]</h2>
+        <h2>Conclusion & Future Roadmap</h2>
+        <p>The Radaris system has successfully demonstrated its ability to prevent road accidents where visibility is limited. The system is cost-effective, easy to implement, and safe for human health.</p>
         <div class="grid">
             <div class="card">
-                <h3>Enhanced Accessibility</h3>
-                <p>Integration of high-intensity visual cues to ensure safety for drivers with hearing impairments[cite: 223].</p>
+                <h3>Accessibility</h3>
+                <p>Future iterations will integrate high-intensity visual cues to support drivers with hearing impairments.</p>
             </div>
             <div class="card">
-                <h3>AI-Driven Identification</h3>
-                <p>Development of models capable of determining the exact number, types, and trajectories of obstacles[cite: 224].</p>
+                <h3>Advanced Features</h3>
+                <p>Next-generation prototypes will include GPS modules and Color LCD displays to show the specific type and number of obstacles.</p>
             </div>
-        </div>
-        <div class="diagram-placeholder">
-            [Insert FIGURE 7: ENHANCED RADIO RECEIVER - Integrated GPS / Color LCD / Object Recognition]
         </div>
     </section>
 
@@ -280,10 +225,9 @@
 
 <footer class="footer">
     <div class="container">
-        <h2 style="color:white; border:none; padding:0; margin-bottom: 10px;">RADARIS SYSTEM</h2>
-        <p>Scientific Research & Hardware Engineering Portfolio</p>
-        <p style="opacity: 0.5; font-size: 0.8rem;">Developed for the prevention of accidents and the protection of human life[cite: 130, 225].</p>
-        <p style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">&copy; 2026 Infomatrix Entry. All Rights Reserved.</p>
+        <h3>RADARIS PROJECT</h3>
+        <p>Innovative Hardware Solutions for Global Road Safety</p>
+        <p>&copy; 2026 Research & Development Group</p>
     </div>
 </footer>
 
